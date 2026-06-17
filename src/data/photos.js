@@ -156,4 +156,11 @@ export const photoVouchers = [
     category: "Training khatam hua hai, zindagi nahi 😭",
     url: "/pic/ak.jpeg"
   }
+  ,
+  {
+    id: "MEM027",
+    title: "Session Selfie",
+    category: "Training khatam hone k baad",
+    url: "/pic/floor.jpeg"
+  }
 ];
