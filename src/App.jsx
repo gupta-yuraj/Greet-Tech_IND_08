@@ -36,6 +36,7 @@ export default function App() {
       {loading ? (
         <TallyLoader progress={progress} />
       ) : (
+        /* Reverted global text utilities here so it doesn't affect the entire UI layout */
         <div className={`${darkMode ? 'dark bg-[#001c3d]' : 'light bg-slate-100'} min-h-screen transition-colors duration-300 pb-12`}>
           
           {/* RESPONSIVE HEADER */}
@@ -67,7 +68,8 @@ export default function App() {
 
           {/* DYNAMIC MAIN CONTENT */}
           <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6">
-            <Home />
+            {/* 🎯 Passing darkMode state explicitly down to Home page component here */}
+            <Home darkMode={darkMode} />
           </main>
 
         </div>
