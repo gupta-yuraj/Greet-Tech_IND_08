@@ -3,6 +3,7 @@ import TallyLoader from "./components/Loader/TallyLoader";
 import Home from "./pages/Home";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
 import MusicToggle from "./components/MusicPlayer/MusicToggle";
+// import MemorySnaps from "./MemorySnaps";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -85,6 +86,8 @@ export default function App() {
           {/* MAIN CONTENT */}
           <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6">
             <Home darkMode={darkMode} />
+              {/* Instagram-style Memory Notifications */}
+  {/* {!showPopup && <MemorySnaps />} */}
           </main>
 
           {/* POPUP */}
@@ -120,6 +123,7 @@ export default function App() {
         <p className="mt-2 italic text-slate-500 dark:text-slate-400">
           And don't act like you don't miss us too. 😌
         </p>
+        
 
         <div className="mt-8 flex justify-end">
           <button
@@ -134,6 +138,11 @@ export default function App() {
       {/* Footer */}
       <div className="bg-slate-100 dark:bg-[#001c3d] px-6 py-3 border-t border-slate-300 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 text-center">
         ❤️ Some memories never fade. See you all again someday.
+      </div>
+      <br />
+      {/* Footer */}
+      <div className="bg-slate-100 dark:bg-[#001c3d] px-6 py-3 border-t border-slate-300 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 text-center">
+        Your Beloved <strong className="font-bold text-white">Yuraj</strong>
       </div>
 
     </div>
