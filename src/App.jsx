@@ -86,75 +86,74 @@ export default function App() {
           {/* MAIN CONTENT */}
           <main className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pt-4 sm:pt-6">
             <Home darkMode={darkMode} />
-              {/* Instagram-style Memory Notifications */}
-  {/* {!showPopup && <MemorySnaps />} */}
+            {/* Instagram-style Memory Notifications */}
+            {/* {!showPopup && <MemorySnaps />} */}
           </main>
 
           {/* POPUP */}
-{showPopup && (
-  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md">
-    <div className="w-[90%] max-w-lg rounded-2xl border border-[#007acc]/40 bg-white dark:bg-[#002b5c] shadow-2xl overflow-hidden">
+          {showPopup && (
+            <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+              <div className="w-full max-w-lg rounded-2xl border border-[#007acc]/40 bg-slate-900 shadow-2xl overflow-hidden">
+                {/* Title Bar */}
+                <div className="bg-[#0057a8] px-6 py-4 border-b border-[#007acc]">
+                  <h2 className="text-xl font-bold text-yellow-300">
+                    💙 Andar jaane se pehle... (Pehle ye padho, thoda sharam karo)
+                  </h2>
+                </div>
 
-      {/* Title Bar */}
-      <div className="bg-[#0057a8] px-6 py-4 border-b border-[#007acc]">
-        <h2 className="text-xl font-bold text-yellow-300">
-          💙 Before You Enter...
-        </h2>
-      </div>
+                {/* Body */}
+                <div className="p-6">
+                  <p className="text-slate-200 text-lg leading-relaxed font-medium">
+                    Kash! Wo training ke din ek baar phir wapas aa pate... 😭
+                  </p>
 
-      {/* Body */}
-      <div className="p-6">
-        <p className="text-slate-700 dark:text-slate-200 text-lg leading-relaxed">
-          I wish I could go back to our training days one more time.
-        </p>
+                  <p className="mt-4 text-slate-300 leading-7">
+                    Yaad hai jab hum ghar jaane ke liye seconds ginte the? Ab dekho, unhi dino ke liye taras rahe hain.
+                  </p>
 
-        <p className="mt-4 text-slate-600 dark:text-slate-300 leading-7">
-          Who knew the days we couldn't wait to finish would become the days we'd miss the most?
-        </p>
+                  <p className="mt-4 text-slate-300 leading-7">
+                    Sach me, <span className="font-semibold text-yellow-400">Abdul Sir</span> ke saath jo masti ki, aur tum sabke saath milkar jo itna mooj kiya... wo faltu ke jokes aur jo <span className="font-semibold text-yellow-400">Backchodi</span> kiya, wo sab bohot yaad aate hain!
+                  </p>
 
-        <p className="mt-4 text-slate-600 dark:text-slate-300 leading-7">
-          I miss the fun we had with <span className="font-semibold text-yellow-400">Abdul Sir</span>, the laughs, the jokes, and all the unforgettable moments.
-        </p>
+                  <p className="mt-4 text-slate-200 font-semibold text-lg">
+                    Bohot yaad aati hai tum sab ki, sach me! ❤️
+                  </p>
 
-        <p className="mt-4 text-slate-700 dark:text-slate-200 font-medium">
-          I miss you all, guys.
-        </p>
+                  <p className="mt-3 italic text-yellow-300/90 bg-yellow-400/10 p-3 rounded-lg border border-yellow-400/20 text-sm">
+                    Aur haan, zyada over-smart banne ki zaroorat nahi hai... mujhe pata hai tum sab bhi miss karte ho, wo alag baat hai ki bolte nahi! 😌
+                  </p>
 
-        <p className="mt-2 italic text-slate-500 dark:text-slate-400">
-          And don't act like you don't miss us too. 😌
-        </p>
-        <p className="mt-2 font-bold  text-white">
-          <strong className="font-mono text-amber-200">
-            from
-            
-            </strong>
-          <br />
-          your beloved Yuraj
-        </p>
+                  <p className="mt-3 font-semibold text-yellow-400 text-sm animate-pulse">
+                    💬 Aur , kabhi WhatsApp group par bhi koi aao/active ho jao...  bahoot sannata hai wahan! 😭
+                  </p>
 
-        <div className="mt-8 flex justify-end">
-          <button
-            onClick={() => setShowPopup(false)}
-            className="bg-[#0057a8] hover:bg-[#007acc] text-white px-8 py-3 rounded-lg font-semibold transition duration-300"
-          >
-            Continue →
-          </button>
-        </div>
-      </div>
+                  <div className="mt-6 pt-4 border-t border-slate-800">
+                    <p className="text-sm text-slate-400">
+                      <span className="font-mono text-amber-300 uppercase tracking-wider text-xs">
+                        Aakhri baar bol raha hu, From
+                      </span>
+                    </p>
+                    <p className="text-lg font-bold text-white mt-0.5">
+                      Aapka pyara Yuraj 😎
+                    </p>
+                  </div>
 
-      {/* Footer */}
-      <div className="bg-slate-100 dark:bg-[#001c3d] px-6 py-3 border-t border-slate-300 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 text-center">
-        ❤️ Some memories never fade. See you all again someday.
-      </div>
-      <br />
-      {/* Footer */}
-      <div className="bg-slate-100 dark:bg-[#001c3d] px-6 py-3 border-t border-slate-300 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 text-center">
-        Your Beloved <strong className="font-bold text-white">Yuraj</strong>
-      </div>
+                  <div className="mt-8 flex justify-end">
+                    <button
+                      onClick={() => setShowPopup(false)}
+                      className="bg-[#0057a8] hover:bg-[#007acc] text-white px-8 py-3 rounded-lg font-semibold transition duration-300 shadow-lg hover:shadow-blue-500/25"
+                    >
+                      Aansoo pochho & aage badho →
+                    </button>
+                  </div>
+                </div>
 
-    </div>
-  </div>
-)}
+                {/* Footer */}
+                <div className="bg-[#001c3d] px-6 py-3 border-t border-slate-800 text-xs text-slate-400 text-center flex items-center justify-center gap-1">
+<span>❤️ Bhulana mushkil hi nahi, namumkin hai... kyuki tumhari saari bachkani harkatein mere paas saved hain! 😉❤️</span>                </div>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </>
