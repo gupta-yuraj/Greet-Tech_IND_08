@@ -123,7 +123,18 @@ export default function App() {
         <p className="mt-2 italic text-slate-500 dark:text-slate-400">
           And don't act like you don't miss us too. 😌
         </p>
+
         
+
+        <p className="mt-2 font-bold  text-white">
+          <strong className="font-mono text-amber-200">
+            from
+            
+            </strong>
+          <br />
+          your beloved Yuraj
+        </p>
+
 
         <div className="mt-8 flex justify-end">
           <button
